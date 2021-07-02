@@ -1,0 +1,46 @@
+float x = width*2;
+float y = height/2;
+float p = 10; // proporção dos elementos do A
+void setup(){
+  size(800, 400);
+	background(100);
+  
+}
+
+void draw(){
+A();
+
+}
+
+void A (){
+	noStroke(100);
+	fill(255);
+	
+	rect(x+p, y-p*(-0.13),1.3*p,p*1.74);// retângulo do topo
+  rect(x, y+p, p, p*7);// retângulo da esquerda
+  rect(x+p*2.3, y+p, p, p*7); // retângulo da direita respeitando o 1.3 de espaço para caber o retângulo do meio
+  rect(x, y+p*3.5, p*3.3, p);// retângulo do meio
+	
+	noStroke(100);
+	ellipse(x+p*0.85, y+p*1.0, p*1.7, p*1.7);
+	ellipse(x+p*2.45, y+p*1.0, p*1.7, p*1.7);
+	//ellipse(x+1.7*p, y+1.2*p, p, p);// para cobrir uma imperfeição
+	
+	//noStroke(100);
+	//rect(x, y+1.27*p, 3.3*p, p/2);// retângulo para cortar o que sobrou das ellipses
+	
+	// duas ellipses menores
+	
+	
+	fill(100);
+	rect(x+p, y+p*1.3, p*1.3, p);// retângulo para cortar os excessos;
+	
+	// criação de um arco para dar o efeito de arredondado
+	stroke(255);
+	fill(100);
+	arc(x+p*1.65, y+p*1.45, p*1.31, p, -PI, 0);  // upper half of circle
+	//ellipse(x+p*1.15, y+1.43*p, p/3, p/3);
+	//ellipse(x+2.2*p, y+1.43*p, p/3, p/3);
+	
+	
+}
